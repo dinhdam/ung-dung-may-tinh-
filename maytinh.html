@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input type="number" id="inputNumber1">
+    <input type="number" id="inputNumber2">
+</p>
+<p>
+    <button onclick="Calculator('add')">Addition(+)</button>
+    <button onclick="Calculator('sub')">Subtraction(-)</button>
+    <button onclick="Calculator('multi')">Multiplication(*)</button>
+    <button onclick="Calculator('divi')">Division(/)</button>
+</p>
+<p id="Result"></p>
+<script>
+    function Calculator(oper) {
+        number1 = Number(document.getElementById("inputNumber1").value);
+        number2 = Number(document.getElementById("inputNumber2").value);
+        let result = 0;
+        switch (oper) {
+            case "add":
+                result = number1+number2;
+                break;
+            case "sub":
+                result = number1-number2;
+                break;
+            case "multi":
+                result = number1*number2;
+                break;
+            case "divi":
+                result = number1/number2;
+        }
+        document.getElementById("Result").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
